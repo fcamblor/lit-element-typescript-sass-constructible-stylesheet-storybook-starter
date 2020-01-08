@@ -5,16 +5,23 @@
   "main": "dist/index.js",
   "scripts": {
     "serve": "serve",
-    "dev": "concurrently --kill-others \"npm run watch:ts\" \"npm run serve\"",
-    "watch:ts": "tsc --watch -p ."
+    "dev": "concurrently --kill-others \"npm run watch:ts\" \"npm run watch:sass:foundation\" \"npm run watch:sass:app\" \"npm run serve\"",
+    "watch:ts": "tsc --watch -p .",
+    "watch:sass:foundation": "sass --watch styles/foundation/foundation.scss dist/foundation.css",
+    "watch:sass:app": "sass --watch styles/app/app.scss dist/app.css"
   },
   "author": "Frédéric Camblor",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "5.0.2",
+    "sass": "1.24.3",
     "serve": "11.3.0",
     "typescript": "3.7.4"
   },
   "dependencies": {
+    "foundation": "4.2.1-1",
+    "foundation-sites": "6.6.1",
+    "jquery": "3.4.1",
+    "what-input": "5.2.6"
   }
 }

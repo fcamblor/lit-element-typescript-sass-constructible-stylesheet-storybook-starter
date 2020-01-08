@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!--
+    Using 2 different css for foundation and the application, because foundation
+    generated css file is not going to change frequently, and its scss scripts are huge to compile
+    => let's separate it from the general purpose dev sass compilation
+     -->
+    <link rel="stylesheet" href="dist/foundation.css" />
+    <link rel="stylesheet" href="dist/app.css" />
+
     <title>lit-element, constructed stylesheets and typescript demo</title>
     <script type="module" src="dist/index.js"></script>
   </head>
