@@ -14,10 +14,29 @@
     <link rel="stylesheet" href="dist/app.css" />
 
     <title>lit-element, constructed stylesheets and typescript demo</title>
-    <script type="module" src="dist/index.js"></script>
   </head>
   <body>
     <action-button name="Inside a web component"></action-button>
     <button type="button" class="success button primary">Outside a web component</button>
+
+    <script type="module">
+      // See wonderful blog post from k33g_org : https://k33g.gitlab.io/articles/2019-09-01-LITELEMENT-STARTER.html
+      import { css, unsafeCSS } from './web_modules/lit-element.js'
+
+      window.constructableStyleSheets = {};
+      const styleSheetPromise = (cssPath, variableName) => fetch(cssPath)
+              .then(response => response.text())
+              .then(cssRaw => {
+                const cssResult = css`${unsafeCSS(cssRaw)}`;
+                window.constructableStyleSheets[variableName] = cssResult;
+              }).catch(error => console.error(`😡 [${variableName}]`, error));
+
+      Promise.all([
+        styleSheetPromise("./dist/foundation.css", "foundation"),
+        styleSheetPromise("./dist/app.css", "app")
+      ]).then(styleSheets => {
+        import("./dist/index.js");
+      });
+    </script>
   </body>
 </html>
