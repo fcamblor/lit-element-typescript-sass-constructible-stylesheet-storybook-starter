@@ -1,0 +1,20 @@
+{
+  "name": "wc-le-cs-ts",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "serve": "serve",
+    "dev": "concurrently --kill-others \"npm run watch:ts\" \"npm run serve\"",
+    "watch:ts": "tsc --watch -p ."
+  },
+  "author": "Frédéric Camblor",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "5.0.2",
+    "serve": "11.3.0",
+    "typescript": "3.7.4"
+  },
+  "dependencies": {
+  }
+}
