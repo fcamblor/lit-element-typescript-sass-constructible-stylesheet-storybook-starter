@@ -4,6 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "postinstall": "npx snowpack",
     "serve": "serve",
     "dev": "concurrently --kill-others \"npm run watch:ts\" \"npm run watch:sass:foundation\" \"npm run watch:sass:app\" \"npm run serve\"",
     "watch:ts": "tsc --watch -p .",
@@ -16,12 +17,15 @@
     "concurrently": "5.0.2",
     "sass": "1.24.3",
     "serve": "11.3.0",
+    "snowpack": "1.0.2",
     "typescript": "3.7.4"
   },
   "dependencies": {
+    "@webcomponents/webcomponentsjs": "2.4.0",
     "foundation": "4.2.1-1",
     "foundation-sites": "6.6.1",
     "jquery": "3.4.1",
+    "lit-element": "2.2.1",
     "what-input": "5.2.6"
   }
 }

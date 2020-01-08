@@ -5,7 +5,15 @@
     "outDir": "./dist",
     "sourceMap": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "/web_modules/*.js": [
+        "node_modules/*",
+        "node_modules/@types/*",
+        "web_modules/*.js"
+      ]
+    }
   },
   "include": [
     "./src/**/*"
