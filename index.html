@@ -23,12 +23,12 @@
       // See wonderful blog post from k33g_org : https://k33g.gitlab.io/articles/2019-09-01-LITELEMENT-STARTER.html
       import { css, unsafeCSS } from './web_modules/lit-element.js'
 
-      window.constructableStyleSheets = {};
+      window.constructibleStyleSheets = {};
       const styleSheetPromise = (cssPath, variableName) => fetch(cssPath)
               .then(response => response.text())
               .then(cssRaw => {
                 const cssResult = css`${unsafeCSS(cssRaw)}`;
-                window.constructableStyleSheets[variableName] = cssResult;
+                window.constructibleStyleSheets[variableName] = cssResult;
               }).catch(error => console.error(`😡 [${variableName}]`, error));
 
       Promise.all([

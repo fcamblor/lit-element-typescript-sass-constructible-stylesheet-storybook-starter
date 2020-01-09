@@ -4,7 +4,7 @@ import { LitElement, html, customElement, property } from '/web_modules/lit-elem
 export class ActionButton extends LitElement {
   @property({ type: String }) name = 'default val';
 
-  static get styles() { return Object.values(window.constructableStyleSheets); }
+  static get styles() { return Object.values(window.constructibleStyleSheets); }
 
   alert() {
     alert('You have pressed a button.');
