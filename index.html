@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>lit-element, constructed stylesheets and typescript demo</title>
+    <!--
+    Polyfill for adoptedStyleSheets, not added to package.json because we need it prior
+    to loading web_components/* scripts
+     -->
+    <script type="text/javascript" src="https://unpkg.com/construct-style-sheets-polyfill"></script>
   </head>
   <body>
     <action-button name="Inside a web component"></action-button>
