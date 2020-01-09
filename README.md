@@ -1,6 +1,8 @@
-<h1 align="center">Welcome to LETSCSS (lit-element-typescript-sass-constructed-stylesheet-starter) 👋</h1>
+<h1 align="center">Welcome to LETSCSS(*) 👋</h1>
 
 > A very simple and basic starter boilerplate template based on Lit-Element + Typescript + SASS + Constructible Stylesheet and with no build tool involved
+
+> _(*) LETSCSS stands for Lit-Element-Typescript-Sass-Constructed-Stylesheet-Starter_
 
 ## Install
 
