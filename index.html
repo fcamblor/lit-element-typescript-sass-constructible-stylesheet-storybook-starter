@@ -10,7 +10,7 @@
     generated css file is not going to change frequently, and its scss scripts are huge to compile
     => let's separate it from the general purpose dev sass compilation
      -->
-    <link rel="stylesheet" href="dist/foundation.css" />
+    <link rel="stylesheet" href="dist/vendors.css" />
     <link rel="stylesheet" href="dist/app.css" />
 
     <title>lit-element, constructed stylesheets and typescript demo</title>
@@ -32,7 +32,7 @@
               }).catch(error => console.error(`😡 [${variableName}]`, error));
 
       Promise.all([
-        styleSheetPromise("./dist/foundation.css", "foundation"),
+        styleSheetPromise("./dist/vendors.css", "vendors"),
         styleSheetPromise("./dist/app.css", "app")
       ]).then(styleSheets => {
         import("./dist/index.js");
