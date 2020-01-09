@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to LETSCSS(*) 👋</h1>
 
-> A very simple and basic starter boilerplate template based on Lit-Element + Typescript + SASS + Constructible Stylesheet and with no build tool involved
+> A very simple and basic starter boilerplate template based on Lit-Element + Typescript + SASS + Constructible Stylesheet and *with no build tool involved*
 
 > _(*) LETSCSS stands for Lit-Element-Typescript-Sass-Constructed-Stylesheet-Starter_
 
@@ -23,6 +23,15 @@ It provides out of the box :
 - Files served on an HTTP Server
 - Global CSS rules being applicable to every Web Components thanks to `Constructible StyleSheets`
 - No build tool complexity involved : everything is in the `package.json`'s `script` section
+
+## Compat
+
+As date of this writing, it works with most ever green browsers :
+- Chrome (79.0.3945.88)
+- Firefox (72.0.1)
+- Safari (12.1.1)
+- Microsoft EDGE (79.0.309.58)
+
 
 ## Behind the scenes
 
