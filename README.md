@@ -27,12 +27,12 @@ It provides out of the box :
 ## Compat
 
 As date of this writing, it works with most ever green browsers :
-✅ Chrome (79.0.3945.88)
-✅ Firefox (72.0.1)
-✅ Safari (12.1.1)
-✅ Microsoft EDGE (79.0.309.58)
-❌ Microsoft Internet Explorer
-❌ Microsoft EDGE versions not based on chrome builds, or based on old Chrome version
+✅ Chrome (79.0.3945.88)  
+✅ Firefox (72.0.1)  
+✅ Safari (12.1.1)  
+✅ Microsoft EDGE (79.0.309.58)  
+❌ Microsoft Internet Explorer  
+❌ Microsoft EDGE versions not based on chrome builds, or based on old Chrome version  
 
 ## Behind the scenes
 
