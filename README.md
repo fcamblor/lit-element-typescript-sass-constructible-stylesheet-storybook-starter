@@ -26,7 +26,7 @@ It provides out of the box :
 
 ## Compat
 
-As date of this writing, it works with most ever green browsers :
+As date of this writing, it works with most ever green browsers :  
 ✅ Chrome (79.0.3945.88)  
 ✅ Firefox (72.0.1)  
 ✅ Safari (12.1.1)  
