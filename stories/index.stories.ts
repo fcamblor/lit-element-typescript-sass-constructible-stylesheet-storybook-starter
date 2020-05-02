@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 
-// import '../my-component.js';
+import '../src/components/button';
 
 export default {
   title: 'Demo',
@@ -9,7 +9,7 @@ export default {
 export const Heading = () => html` <h1>Hello World</h1> `;
 
 export const SettingProperties = () => html`
-  <my-component .data=${{ header: 'foo', state: true }}>Hello World</my-component>
+  <action-button name="hello"></action-button>
 `;
 
 export const Events = () => html`

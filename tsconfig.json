@@ -2,7 +2,8 @@
   "compilerOptions": {
     "module": "es6",
     "target": "es6",
-    "outDir": "./dist",
+    "outDir": "build/lib",
+    "lib": [ "es5", "es6", "es7", "es2017", "dom" ],
     "sourceMap": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
@@ -13,9 +14,12 @@
         "node_modules/@types/*",
         "web_modules/*.js"
       ]
-    }
+    },
+    "declaration": true
+    ,"allowSyntheticDefaultImports": true
   },
   "include": [
     "./src/**/*"
   ]
+  "exclude": ["node_modules", "build", "scripts"]
 }
