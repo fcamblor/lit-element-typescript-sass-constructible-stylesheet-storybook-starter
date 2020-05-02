@@ -10,11 +10,16 @@
     "dev": "concurrently --kill-others \"npm run watch:ts\" \"npm run watch:sass:vendors\" \"npm run watch:sass:app\" \"npm run serve\"",
     "watch:ts": "tsc --watch -p .",
     "watch:sass:vendors": "sass --watch styles/foundation/foundation.scss dist/vendors.css",
-    "watch:sass:app": "sass --watch styles/app/app.scss dist/app.css"
+    "watch:sass:app": "sass --watch styles/app/app.scss dist/app.css",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "Frédéric Camblor",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "7.9.6",
+    "@storybook/web-components": "6.0.0-beta.1",
+    "babel-loader": "8.1.0",
     "concurrently": "5.0.2",
     "sass": "1.24.3",
     "serve": "11.3.0",
