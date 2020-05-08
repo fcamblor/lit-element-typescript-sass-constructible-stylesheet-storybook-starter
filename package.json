@@ -7,7 +7,7 @@
     "postinstall": "npx snowpack",
     "uninstall": "npx snowpack",
     "serve": "serve",
-    "dev": "concurrently --kill-others \"npm run watch:ts\" \"npm run watch:sass:vendors\" \"npm run watch:sass:app\" \"npm run serve\"",
+    "dev": "concurrently --kill-others --names tsc,sass-vendors,sass-app,serve \"npm run watch:ts\" \"npm run watch:sass:vendors\" \"npm run watch:sass:app\" \"npm run serve\"",
     "watch:ts": "tsc --watch -p .",
     "watch:sass:vendors": "sass --watch styles/foundation/foundation.scss dist/vendors.css",
     "watch:sass:app": "sass --watch styles/app/app.scss dist/app.css"
