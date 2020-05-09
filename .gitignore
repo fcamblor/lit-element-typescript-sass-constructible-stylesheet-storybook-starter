@@ -1,3 +1,4 @@
 dist/
 node_modules/
 web_modules/
+storybook-static/
