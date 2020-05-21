@@ -1,4 +1,4 @@
-import { LitElement, html, customElement, property } from '/web_modules/lit-element.js';
+import { LitElement, html, customElement, property } from 'lit-element';
 
 @customElement('action-button')
 export class ActionButton extends LitElement {

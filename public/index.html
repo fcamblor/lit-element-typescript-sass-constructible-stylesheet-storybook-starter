@@ -10,6 +10,7 @@
     to loading web_components/* scripts
      -->
     <script type="text/javascript" src="https://unpkg.com/construct-style-sheets-polyfill"></script>
+    <script type="importmap" src="/web_modules/import-map.json"></script>
   </head>
   <body>
     <action-button name="Inside a web component"></action-button>
@@ -17,6 +18,9 @@
 
     <script type="module">
       // See wonderful blog post from k33g_org : https://k33g.gitlab.io/articles/2019-09-01-LITELEMENT-STARTER.html
+      // Important note : it seems like importmap above has not been loaded when we arrive here, has 'lit-element'
+      // mapped module doesn't seem to exist here (yet)
+      // Maybe a bug, I don't know...
       import { css, unsafeCSS } from '/web_modules/lit-element.js'
 
       window.constructibleStyleSheets = {};
@@ -38,7 +42,7 @@
         styleSheetPromise("/styles/app.css", "app")
       ]).then(styleSheets => {
         document.adoptedStyleSheets = styleSheets;
-        import("./dist/index.js");
+        import("/_dist_/index.js");
       });
     </script>
   </body>
