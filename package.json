@@ -6,10 +6,8 @@
   "scripts": {
     "init": "npm install && snowpack install",
     "serve": "serve",
-    "dev": "concurrently --kill-others --names tsc,sass-vendors,sass-app,serve \"npm run watch:ts\" \"npm run watch:sass:vendors\" \"npm run watch:sass:app\" \"npm run serve\"",
-    "watch:ts": "tsc --watch -p .",
-    "watch:sass:vendors": "sass --watch styles/foundation/foundation.scss dist/vendors.css",
-    "watch:sass:app": "sass --watch styles/app/app.scss dist/app.css"
+    "dev": "concurrently --kill-others --names tsc,serve \"npm run watch:ts\" \"npm run serve\"",
+    "watch:ts": "tsc --watch -p ."
   },
   "author": "Frédéric Camblor",
   "license": "MIT",
@@ -36,6 +34,11 @@
   },
   "snowpack": {
     "scripts": {
+      "run:sass-vendors": "sass styles/foundation/foundation.scss dist/styles/vendors.css",
+      "run:sass-vendors::watch": "$1 --watch",
+      "run:sass-app": "sass styles/app/app.scss dist/styles/app.css",
+      "run:sass-app::watch": "$1 --watch",
+      "mount:styles": "mount dist/styles --to /styles",
       "mount:web_modules": "mount web_modules"
     }
   }
