@@ -24,6 +24,7 @@
     "@webcomponents/webcomponentsjs": "2.4.0",
     "jquery": "3.5.0",
     "lit-element": "2.2.1",
+    "lit-html": "1.2.1",
     "what-input": "5.2.6"
   },
   "dependencies": {
