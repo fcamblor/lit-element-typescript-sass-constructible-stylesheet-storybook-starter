@@ -1,4 +1,5 @@
 dist/
 node_modules/
 web_modules/
-storybook-static/
+storybook/storybook-static/
+storybook/node_modules/
