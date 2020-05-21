@@ -5,8 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "init": "npm install && snowpack install",
-    "serve": "serve",
-    "dev": "concurrently --kill-others --names tsc,serve \"npm run watch:ts\" \"npm run serve\"",
+    "dev": "concurrently --kill-others --names tsc \"npm run watch:ts\"",
     "watch:ts": "tsc --watch -p ."
   },
   "author": "Frédéric Camblor",
@@ -14,7 +13,6 @@
   "devDependencies": {
     "concurrently": "5.0.2",
     "sass": "1.24.3",
-    "serve": "11.3.0",
     "snowpack": "2.1.1",
     "typescript": "3.7.4"
   },
@@ -38,6 +36,7 @@
       "run:sass-vendors::watch": "$1 --watch",
       "run:sass-app": "sass styles/app/app.scss dist/styles/app.css",
       "run:sass-app::watch": "$1 --watch",
+      "mount:public": "mount public --to /",
       "mount:styles": "mount dist/styles --to /styles",
       "mount:web_modules": "mount web_modules"
     }
