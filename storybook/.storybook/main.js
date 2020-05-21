@@ -4,9 +4,9 @@ const path = require('path');
 module.exports = {
   stories: ['../stories/**/*.stories.{js,mdx,md}'],
   addons: [
-    'storybook-prebuilt/addon-docs/register.js',
-    'storybook-prebuilt/addon-knobs/register.js',
-    'storybook-prebuilt/addon-a11y/register.js',
+    'storybook/storybook-prebuilt/addon-docs/register.js',
+    'storybook/storybook-prebuilt/addon-knobs/register.js',
+    'storybook/storybook-prebuilt/addon-a11y/register.js',
   ],
   rollup: config => {
     config.plugins.push({
@@ -35,5 +35,6 @@ module.exports = {
     nodeResolve: true,
     watch: true,
     open: true,
+    rootDir: "../"
   },
 };
