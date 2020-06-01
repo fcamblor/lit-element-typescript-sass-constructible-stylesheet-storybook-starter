@@ -1,6 +1,6 @@
 import { html } from 'lit-html';
 
-import '../../dist/components/button.js';
+import '/_dist_/components/button.js';
 
 export default {
     title: 'Demo Component Story Format',

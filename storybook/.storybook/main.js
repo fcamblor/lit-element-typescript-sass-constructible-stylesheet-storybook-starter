@@ -4,10 +4,12 @@ const path = require('path');
 module.exports = {
   stories: ['../stories/**/*.stories.{js,mdx,md}'],
   addons: [
-    'storybook/storybook-prebuilt/addon-docs/register.js',
-    'storybook/storybook-prebuilt/addon-knobs/register.js',
-    'storybook/storybook-prebuilt/addon-a11y/register.js',
+    'storybook-prebuilt/addon-docs/register.js',
+    'storybook-prebuilt/addon-knobs/register.js',
+    'storybook-prebuilt/addon-a11y/register.js',
   ],
+  // this would disable the ids of headlines - you can also use it to add your own unified/remark plugins
+  // setupMdjsPlugins: plugins => plugins.filter(plugin => plugin.name !== 'mdSlug'),
   rollup: config => {
     config.plugins.push({
       generateBundle() {
@@ -32,10 +34,13 @@ module.exports = {
     });
   },
   esDevServer: {
+    port: 8001,
     nodeResolve: true,
     watch: true,
     open: true,
-    rootDir: "../",
-    moduleDirs: ['node_modules' /*, 'web_modules' */]
+    rootDir: "./",
+    moduleDirs: [
+      'node_modules',
+      /*, 'web_modules' */]
   },
 };

@@ -32,6 +32,7 @@
   "snowpack": {
     "extends": "@snowpack/app-scripts-lit-element",
     "scripts": {
+      "proxy:storybook": "proxy http://localhost:8001 --to /storybook",
       "run:sass-vendors": "sass styles/foundation/foundation.scss dist/styles/vendors.css",
       "run:sass-vendors::watch": "$1 --watch",
       "run:sass-app": "sass styles/app/app.scss dist/styles/app.css",
@@ -39,7 +40,7 @@
       "mount:public": "mount public --to /",
       "mount:styles": "mount dist/styles --to /styles",
       "mount:src": "mount src --to /_dist_",
-      "mount:web_modules": "mount web_modules"
+      "mount:web_modules": "mount web_modules --to /web_modules"
     }
   }
 }
