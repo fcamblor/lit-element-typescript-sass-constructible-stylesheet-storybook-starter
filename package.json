@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "init": "npm install && snowpack install"
+    "init": "npm install && snowpack install && cd storybook && npm install && npm run storybook:build && cd -"
   },
   "author": "Frédéric Camblor",
   "license": "MIT",

@@ -1,19 +1,23 @@
 <h1 align="center">Welcome to LETSCSS(*) 👋</h1>
 
-> A very simple and basic starter boilerplate template based on Lit-Element + Typescript + SASS + Constructible Stylesheet + Storybook and *with no build tool involved*
+> A very simple and basic starter boilerplate template based on Lit-Element + Typescript + SASS + Constructible Stylesheet + Storybook and *with no bundler involved (thanks to Snowpack 2)*
 
 > _(*) LETSCSS stands for Lit-Element-Typescript-Sass-Constructed-Stylesheet-Storybook_
 
 ## Install
 
 ```sh
-npm install
+npm run init
 ```
 
 ## Usage
 
 ```sh
-npm run dev
+snowpack dev
+
+# if you decide to showcase your webcomponent into storybook, then run this as well
+# (note that storybook will be proxified behind snowpack dev server on http://localhost:8080/storybook/) :
+cd storybook && npm run storybook
 ```
 
 It provides out of the box :
