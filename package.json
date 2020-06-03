@@ -4,32 +4,43 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "postinstall": "npx snowpack",
-    "uninstall": "npx snowpack",
-    "serve": "serve",
-    "dev": "concurrently --kill-others --names tsc,sass-vendors,sass-app,serve \"npm run watch:ts\" \"npm run watch:sass:vendors\" \"npm run watch:sass:app\" \"npm run serve\"",
-    "watch:ts": "tsc --watch -p .",
-    "watch:sass:vendors": "sass --watch styles/foundation/foundation.scss dist/vendors.css",
-    "watch:sass:app": "sass --watch styles/app/app.scss dist/app.css"
+    "init": "npm install && snowpack install && cd storybook && npm install && npm run storybook:build && cd -"
   },
   "author": "Frédéric Camblor",
   "license": "MIT",
   "devDependencies": {
+    "@snowpack/app-scripts-lit-element": "0.6.1",
     "concurrently": "5.0.2",
     "sass": "1.24.3",
-    "serve": "11.3.0",
-    "snowpack": "1.0.2",
+    "snowpack": "2.1.1",
     "typescript": "3.7.4"
   },
-  "dependencies": {
+  "webDependencies": {
     "@webcomponents/webcomponentsjs": "2.4.0",
-    "foundation": "4.2.1-1",
-    "foundation-sites": "6.6.1",
     "jquery": "3.5.0",
     "lit-element": "2.2.1",
+    "lit-html": "1.2.1",
     "what-input": "5.2.6"
+  },
+  "dependencies": {
+    "foundation": "4.2.1-1",
+    "foundation-sites": "6.6.1"
   },
   "engines": {
     "node": ">=12.0.0"
+  },
+  "snowpack": {
+    "extends": "@snowpack/app-scripts-lit-element",
+    "scripts": {
+      "proxy:storybook": "proxy http://localhost:8001 --to /storybook",
+      "run:sass-vendors": "sass styles/foundation/foundation.scss dist/styles/vendors.css",
+      "run:sass-vendors::watch": "$1 --watch",
+      "run:sass-app": "sass styles/app/app.scss dist/styles/app.css",
+      "run:sass-app::watch": "$1 --watch",
+      "mount:public": "mount public --to /",
+      "mount:styles": "mount dist/styles --to /styles",
+      "mount:src": "mount src --to /_dist_",
+      "mount:web_modules": "mount web_modules --to /web_modules"
+    }
   }
 }

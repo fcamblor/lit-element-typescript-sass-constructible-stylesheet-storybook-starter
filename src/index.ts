@@ -1,6 +1,3 @@
-import '/web_modules/lit-element.js'
-
-
-import {ActionButton} from './components/button.js';
+import {ActionButton} from './components/button';
 
 console.log("App started !", ActionButton.BLAH);

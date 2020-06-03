@@ -1,0 +1,26 @@
+<script type="module">
+    // See wonderful blog post from k33g_org : https://k33g.gitlab.io/articles/2019-09-01-LITELEMENT-STARTER.html
+    import { css, unsafeCSS } from '/web_modules/lit-element.js'
+
+    window.constructibleStyleSheets = {};
+    const styleSheetPromise = (cssPath, variableName) => fetch(cssPath)
+        .then(response => response.text())
+        .then(cssRaw => {
+            const cssResult = css`${unsafeCSS(cssRaw)}`;
+            window.constructibleStyleSheets[variableName] = cssResult;
+            return cssResult.styleSheet;
+        }).catch(error => console.error(`😡 [${variableName}]`, error));
+
+    Promise.all([
+        /*
+        Using 2 different css for foundation and the application, because foundation
+        generated css file is not going to change frequently, and its scss scripts are huge to compile
+        => let's separate it from the general purpose dev sass compilation
+        */
+        styleSheetPromise("/styles/vendors.css", "vendors"),
+        styleSheetPromise("/styles/app.css", "app")
+    ]).then(styleSheets => {
+        document.adoptedStyleSheets = styleSheets;
+        import("/_dist_/index.js");
+    });
+</script>

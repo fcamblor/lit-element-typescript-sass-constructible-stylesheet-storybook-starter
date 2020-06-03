@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "@webcomponents/webcomponentsjs": "https://cdn.pika.dev/pin/@webcomponents/webcomponentsjs@v2.4.0-lM85zk0ud3rAYDE9feog/webcomponentsjs.js",
+    "jquery": "https://cdn.pika.dev/pin/jquery@v3.5.0-lCu2AHgu1Dh5FG9wZJq3/jquery.js",
+    "lit-element": "https://cdn.pika.dev/pin/lit-element@v2.2.1-tBtgymCe7o67uFBWiafU/lit-element.js",
+    "lit-html": "https://cdn.pika.dev/pin/lit-html@v1.2.1-9MYIKzuAklEkQsSL4H7e/lit-html.js",
+    "what-input": "https://cdn.pika.dev/pin/what-input@v5.2.6-39sicsL5QK1axC2xRyAQ/what-input.js"
+  }
+}
